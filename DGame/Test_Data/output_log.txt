@@ -1,0 +1,35 @@
+Initialize engine version: 2017.1.0p4 (892c0f8d8f8a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     1136 MB
+    Driver:   20.19.15.4549
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\kbc15\Desktop\DGame\Test_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.273 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.703858 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 128c -> priority: 1 
+  Thread -> id: 17a8 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.839612 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 287.
+Total: 0.246327 ms (FindLiveObjects: 0.038180 ms CreateObjectMapping: 0.018064 ms MarkObjects: 0.176534 ms  DeleteObjects: 0.012316 ms)
+
