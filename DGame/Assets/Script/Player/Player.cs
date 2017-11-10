@@ -15,8 +15,6 @@ public class Player : NetworkBehaviour
     public float moveSpeed = 1.0f;
     public float rotateSpeed = 3.0f;
 
-
-    private CharacterController CharaCon = null;
     // Use this for initialization
     void Start () {
       
