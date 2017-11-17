@@ -18,7 +18,7 @@ public class DemoGameCamera : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        Player = GameObject.Find("NoboPlayer");
+        Player = GameObject.FindWithTag("Player");
         PlayerPos = Player.transform.position;
     }
 
