@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGame", "DGame.csproj", "{93F82362-B100-FDD8-CAB2-5604D4F79079}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGame.Plugins", "DGame.Plugins.csproj", "{7A76DCE6-16E6-868C-D356-D112B60AA66F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGame.Editor.Plugins", "DGame.Editor.Plugins.csproj", "{8A0D2D30-935D-CFF8-DA0F-FF33D82540A5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,14 +13,6 @@ Global
 		{93F82362-B100-FDD8-CAB2-5604D4F79079}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93F82362-B100-FDD8-CAB2-5604D4F79079}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93F82362-B100-FDD8-CAB2-5604D4F79079}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A76DCE6-16E6-868C-D356-D112B60AA66F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A76DCE6-16E6-868C-D356-D112B60AA66F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A76DCE6-16E6-868C-D356-D112B60AA66F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A76DCE6-16E6-868C-D356-D112B60AA66F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8A0D2D30-935D-CFF8-DA0F-FF33D82540A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8A0D2D30-935D-CFF8-DA0F-FF33D82540A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A0D2D30-935D-CFF8-DA0F-FF33D82540A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8A0D2D30-935D-CFF8-DA0F-FF33D82540A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
