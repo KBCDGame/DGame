@@ -26,26 +26,40 @@ public class DemoPlayer : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        //キャラクターコントローラー取得。
         CharaCon = GetComponent<CharacterController>();
+        //カメラ取得。
         Camera = GameObject.Find("DemoCamera");
     }
 
-    // Update is called once per frame
+    //Inputの入力漏れを無くすためこっちに記述。
     void Update()
     {
-        float y;
-
-        y = MoveDirection.y;
-
+        //入力値を格納。
         InputHorizontal = Input.GetAxis("Horizontal");
         InputVertical = Input.GetAxis("Vertical");
+
+        //接地判定。
+        if (CharaCon.isGrounded)
+        {
+            //接地中はジャンプ可。
+            if (Input.GetButton("Jump"))
+            {
+                //ジャンプ。
+                Jump();
+            }
+        }
+    }
+
+    //移動を安定させるためにFixedUpdateにした。
+    // Update is called once per frame
+    void FixedUpdate()
+    {
         // カメラの方向から、X-Z平面の単位ベクトルを取得
-        Vector3 cameraForward = Vector3.Scale(Camera.transform.forward, new Vector3(1, 0, 1)).normalized;
+        Vector3 cameraForward = Vector3.Scale(Camera.transform.forward, new Vector3(1.0f, 0.0f, 1.0f)).normalized;
 
         // 方向キーの入力値とカメラの向きから、移動方向を決定
         Vector3 moveForward = cameraForward * InputVertical + Camera.transform.right * InputHorizontal;
-
-        MoveDirection.y = y;
 
         // 移動方向にスピードを掛ける。
         MoveDirection.x = moveForward.x * MoveSpeed;
@@ -55,26 +69,14 @@ public class DemoPlayer : MonoBehaviour {
         if (moveForward != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(moveForward);
-        }
-
-        //接地判定。
-        if (CharaCon.isGrounded)
-        {
-            //接地中はジャンプ可。
-            if (Input.GetButton("Jump"))
-            {
-                Jump();
-            }
-        }
-        else
-        {
-            MoveDirection.y -= Gravity * Time.deltaTime;
-        }
+        }       
+        //重力計算。
+        MoveDirection.y -= Gravity * Time.fixedDeltaTime;
         //計算した移動量をキャラコンに渡す。
-        CharaCon.Move(MoveDirection * Time.deltaTime);
-
+        CharaCon.Move(MoveDirection * Time.fixedDeltaTime);
     }
 
+    //ジャンプの処理。
     void Jump()
     {
         MoveDirection.y =  JumpSpeed;

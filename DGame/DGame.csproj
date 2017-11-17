@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Camera\DemoGameCamera.cs" />
     <Compile Include="Assets\Script\Camera\GameCamera.cs" />
+    <Compile Include="Assets\Script\NetWorkManager.cs" />
     <Compile Include="Assets\Script\Player\DemoPlayer.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
     <Compile Include="Assets\Script\Title\Button\StartButton.cs" />
