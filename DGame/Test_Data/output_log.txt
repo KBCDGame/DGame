@@ -19,6 +19,17 @@ Platform assembly: C:\Users\a\Documents\DGame\DGame\Test_Data\Managed\UnityEngin
 Loading C:\Users\a\Documents\DGame\DGame\Test_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
 Platform assembly: C:\Users\a\Documents\DGame\DGame\Test_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\Users\a\Documents\DGame\DGame\Test_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.036 seconds
+- Completed reload, in  0.247 seconds
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 9.423698 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2b94 -> priority: 1 
+  Thread -> id: 2b88 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.212399 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 287.
+Total: 0.676992 ms (FindLiveObjects: 0.023811 ms CreateObjectMapping: 0.014369 ms MarkObjects: 0.621568 ms  DeleteObjects: 0.016011 ms)
+
