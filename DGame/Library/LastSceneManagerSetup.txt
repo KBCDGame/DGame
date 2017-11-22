@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/DGame.unity
+- path: Assets/Scene/KHScene.unity
   isLoaded: 1
   isActive: 1
