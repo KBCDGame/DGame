@@ -22,19 +22,40 @@ public class DemoGameCamera : MonoBehaviour {
     public float MaxRotateY = 0.0f;
     //下に対する回転の下限。
     public float MinRotateY = 0.0f;
+    //プレイヤーとカメラ間の最大距離。
+    public float MaxDistance = 80.0f;
+    //プレイヤーとカメラ間の最小距離。
+    public float MinDistance = 3.0f;
+    //スタート時にプレイヤからどれだけカメラをずらすか。
+    public Vector3 StartOffsetPos = Vector3.zero;
     ////ズームの最大と最小。
     //public float ZoomMax,ZoomMin = 0.0f;
     ////ズームの時のスピード。
     //public float ZoomSpeed = 1.0f;
-    //
 
 
     // Use this for initialization
     void Start()
     {
+        //最大と最小が反転して設定されていた場合。
+        if (MinDistance > MaxDistance)
+        {
+            float work = MinDistance;
+            MinDistance = MaxDistance;
+            MaxDistance = work;
+            Debug.Log("プレイヤーとカメラ間の最小距離とプレイヤーとカメラ間の最大距離が逆でした。");
+            
+        }
+        //プレイヤー取得。
         Player = GameObject.FindWithTag("Player");
-        PlayerPos = Player.transform.position;
+        //カメラ取得。
         GemaCamera = GetComponent<Camera>();
+        //プレイヤーの位置取得。
+        PlayerPos = Player.transform.position;
+        //カメラの位置をプレイヤーからずらした位置に設定。
+        Vector3 newPos = PlayerPos + StartOffsetPos;
+        newPos.z += MinDistance;
+        transform.position += newPos;
     }
 
     // Update is called once per frame
@@ -54,9 +75,10 @@ public class DemoGameCamera : MonoBehaviour {
         //PlayerPosの位置のY軸を中心に、回転（公転）する
         transform.RotateAround(PlayerPos, Vector3.up, InputX);
 
-        //前後のカメラ移動。
+        //LBが押されている。
         if (Input.GetKey(KeyCode.Joystick1Button4))
         {
+            //カメラの前後移動。
             CameraMoveBeforeAndAfter();
         }
         else
@@ -101,12 +123,29 @@ public class DemoGameCamera : MonoBehaviour {
     //ホイールとパッドを使ったカメラの前後移動。
     private void CameraMoveBeforeAndAfter()
     {
-        //カメラの移動。
-        //transform.position.Set(transform.position.x, transform.position.y, transform.position.z + -InputY * Time.deltaTime * 10.0f);
-        //float distance = Vector3.Distance(transform.position, PlayerPos);
-        if (Mathf.Abs(Vector3.Distance((transform.forward * -InputY * Time.deltaTime * 10.0f),PlayerPos)) < 80.0f && Mathf.Abs(Vector3.Distance((transform.forward * -InputY * Time.deltaTime * 10.0f), PlayerPos)) > 3.0f)
+        //どれくらい移動するか。
+        Vector3 MovePos = transform.forward * -InputY * Time.deltaTime * 2.0f;
+
+        //カメラとプレイヤーの距離計算。
+        float distance = (transform.position.z + MovePos.z) - PlayerPos.z;
+
+        //スティックが前に倒されている。
+        if (InputY > 0.0f)
+        {  
+            //プレイヤーとカメラの距離が指定範囲内なら移動。
+            if (Mathf.Abs(distance) < 80.0f)
+            {
+                transform.position += MovePos;
+            }
+        }
+        //右スティックが後ろに倒されている。
+        else if (InputY < 0.0f)
         {
-            transform.position += transform.forward * -InputY * Time.deltaTime * 10.0f;
+            //プレイヤーとカメラの距離が指定範囲内なら移動。
+            if (Mathf.Abs(distance) > 3.0f)
+            {
+                transform.position += MovePos;
+            }
         }
     }
 

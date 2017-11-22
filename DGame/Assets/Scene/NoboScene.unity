@@ -118,7 +118,6 @@ GameObject:
   - component: {fileID: 71950664}
   - component: {fileID: 71950663}
   - component: {fileID: 71950662}
-  - component: {fileID: 71950665}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -180,18 +179,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!148 &71950665
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 71950661}
-  m_Enabled: 1
-  m_StateSynchronization: 1
-  m_Observed: {fileID: 71950664}
-  m_ViewID:
-    m_ID: 2
-    m_Type: 1
 --- !u!1001 &257321685
 Prefab:
   m_ObjectHideFlags: 0
@@ -490,6 +477,21 @@ Prefab:
         type: 2}
       propertyPath: field of view
       value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539900505042390, guid: c01ef9b91bad8b646b4bbbc07b121592,
+        type: 2}
+      propertyPath: StartOffsetPos.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539900505042390, guid: c01ef9b91bad8b646b4bbbc07b121592,
+        type: 2}
+      propertyPath: MaxDistance
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539900505042390, guid: c01ef9b91bad8b646b4bbbc07b121592,
+        type: 2}
+      propertyPath: MinDistance
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c01ef9b91bad8b646b4bbbc07b121592, type: 2}
