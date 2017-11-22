@@ -429,7 +429,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4421518645521952, guid: c01ef9b91bad8b646b4bbbc07b121592, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4421518645521952, guid: c01ef9b91bad8b646b4bbbc07b121592, type: 2}
       propertyPath: m_LocalRotation.x
@@ -471,46 +471,26 @@ Prefab:
       propertyPath: MaxRotateY
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114539900505042390, guid: c01ef9b91bad8b646b4bbbc07b121592,
+        type: 2}
+      propertyPath: ZoomMin
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539900505042390, guid: c01ef9b91bad8b646b4bbbc07b121592,
+        type: 2}
+      propertyPath: ZoomMax
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539900505042390, guid: c01ef9b91bad8b646b4bbbc07b121592,
+        type: 2}
+      propertyPath: ZoomSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 20316455152522472, guid: c01ef9b91bad8b646b4bbbc07b121592,
+        type: 2}
+      propertyPath: field of view
+      value: 38
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c01ef9b91bad8b646b4bbbc07b121592, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1850206439
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1850206441}
-  - component: {fileID: 1850206440}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1850206440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1850206439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52065cb1e80cc5e40a5a0978ecb52048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1850206441
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1850206439}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.77, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
