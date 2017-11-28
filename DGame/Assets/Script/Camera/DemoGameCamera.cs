@@ -152,18 +152,11 @@ public class DemoGameCamera : MonoBehaviour
 
         //カメラとプレイヤーの距離計算。
         float distance = (transform.position.z + MovePos.z) - PlayerPos.z;
-        Debug.Log("カメラからプレイヤーまでの現在の距離:"+Mathf.Abs(distance));
 
-        //スティックが前に倒されていて、プレイヤーとカメラの距離が指定範囲内なら移動。
-        if ((value > 0.0f && Mathf.Abs(distance) < PlayerToCameraMaxDistance)||(value < 0.0f && Mathf.Abs(distance) > PlayerToCameraMinDistance))
+        //スティックが前後どちらかに倒されていて、プレイヤーとカメラの距離が指定範囲内なら移動。
+        if ((value > 0.0f && Mathf.Abs(distance) < PlayerToCameraMaxDistance) || (value < 0.0f && Mathf.Abs(distance) > PlayerToCameraMinDistance))
         {
             transform.position += MovePos;
-        }
-        //右スティックが後ろに倒されていて、プレイヤーとカメラの距離が指定範囲内なら移動。
-        else if (value < 0.0f && Mathf.Abs(distance) > PlayerToCameraMinDistance)
-        {
-            //transform.position += MovePos;
-            //IsMoveBeforeOrAfterFlag = true;
         }
     }
 }

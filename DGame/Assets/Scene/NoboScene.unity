@@ -452,7 +452,7 @@ Prefab:
     - target: {fileID: 114539900505042390, guid: c01ef9b91bad8b646b4bbbc07b121592,
         type: 2}
       propertyPath: StartOffsetPos.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 114539900505042390, guid: c01ef9b91bad8b646b4bbbc07b121592,
         type: 2}
