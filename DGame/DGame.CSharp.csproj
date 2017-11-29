@@ -116,11 +116,15 @@
     <Compile Include="Assets\Object\Free_Rocks\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\Object\Free_Rocks\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Object\Free_Rocks\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
+    <Compile Include="Assets\Object\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Script\Camera\DemoGameCamera.cs" />
+    <Compile Include="Assets\Script\Chat\SaveChat.cs" />
     <Compile Include="Assets\Script\NPC\Name.cs" />
     <Compile Include="Assets\Script\Player\DemoPlayer.cs" />
     <Compile Include="Assets\Script\Player\Player.cs" />
+    <Compile Include="Assets\Script\Player\PlayerId.cs" />
     <Compile Include="Assets\Script\Player\PlayerUI.cs" />
+    <Compile Include="Assets\Script\Seni\IeSeni.cs" />
     <Compile Include="Assets\Script\Title\Button\StartButton.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +175,8 @@
     <None Include="Assets\Object\Free_Rocks\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
     <None Include="Assets\Object\Free_Rocks\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
     <None Include="Assets\Object\Free_Rocks\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
+    <None Include="Assets\Object\Haruko\ReadMe.txt" />
+    <None Include="Assets\Object\Medieval_House\Info.txt" />
     <None Include="Assets\Object\nnj3de_crucarp\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
